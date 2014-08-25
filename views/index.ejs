@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="todo">
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/css/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <div ng-controller="todoCtrl">
+	  <div ng-repeat="x in todos">
+		<input type="checkbox" ng-click="deleteTodo(x._id)">{{x.title}}
+	  </div>
+	  
+	  
+	  <form>
+		title : <input type="text" ng-model="todo.title">
+		text : <input type="text" ng-model="todo.text">
+		<button ng-click="createTodo()">Create</button>
+	  </form>
+	</div>
+	<script src="/angularjs/1.2.11/angular.min.js"></script>
+	<script src="/js/controller.js"></script>
+  </body>
+</html>
