@@ -1,0 +1,6 @@
+<p>List Page</p>
+<div ng-repeat="x in todos">
+	<input type="checkbox" ng-click="deleteTodo(x._id)">{{x.title}} 
+	<a href="#/todos/{{x._id}}">View </a>
+</div>
+<a href="#/new">Add New</a>

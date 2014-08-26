@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html ng-app="todo">
+<html ng-app="todoApp">
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/css/style.css' />
   </head>
   <body>
     <h1><%= title %></h1>
+	<!--
     <div ng-controller="todoCtrl">
 	  <div ng-repeat="x in todos">
 		<input type="checkbox" ng-click="deleteTodo(x._id)">{{x.title}}
@@ -18,7 +19,11 @@
 		<button ng-click="createTodo()">Create</button>
 	  </form>
 	</div>
-	<script src="/angularjs/1.2.11/angular.min.js"></script>
+	-->
+	<div ng-view></div>
+	<script src="/angularjs/1.2.23/angular.min.js"></script>
+	<script src="/angularjs/1.2.23/angular-route.min.js"></script>
 	<script src="/js/controller.js"></script>
+	<script src="/js/app.js"></script>
   </body>
 </html>
